@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+body {
+    background-color: #fffffc;
+}
+
+/* ヘッダー・メインビジュアル */
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 70px 167px 70px;
+}
+
+.logo {
+    width: 330px;
+}
+
+.header-nav ul {
+    display: flex;
+    gap: 60px;
+}
+
+.header-nav li {
+    color: #f1c16d;
+    font-size: 22px;
+}
+
+/* メイン */
+
+main {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 168px 124px 168px;
+}
+
+main div {
+    text-align: left;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #f1c16d;
+    margin-bottom: 40px;
+}
+
+h2{
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 32px;
+}
+
+h3{
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 107px;
+}
+
+p{
+    font-size: 18px;
+    line-height: 1.78;
+    text-align: left;
+}
+
+main img {
+    width: 570px;
+    border-radius: 25px;
+    border: solid 8px #f1c16d;
+}
+
+/* ボタン */
+
+.button {
+    margin-bottom: 150px;
+}
+
+.button a::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    left: 16px;
+}
+
+.button a::after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 5px 9px 5px  0;
+    border-color: transparent #ffffff transparent transparent;
+    left: 23px;
+}
+
+.button a {
+    background: #6bd6c7;
+    border-radius: 9999px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 245px;
+    padding: 2px 25px 2px 47px;
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+ /* フッター */
+
+ #footer {
+    background-color: #f1c16d;
+    font-size: 24px;
+}
+
+.flex-item {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 0 172px 0;
+}
+
+.footer-logo {
+    width: 215px;
+}
+
+.flex-item li {
+    margin-bottom: 25px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.flex-item li:last-child {
+    margin-bottom: 0;
+}
+
+.copyright {
+    text-align: center;
+    color: #fff;
+    padding-bottom: 24px;
+}

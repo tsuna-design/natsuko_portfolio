@@ -7,7 +7,7 @@ body {
 }
 
 .title h2 {
-    font-size: 45px;
+    font-size: 40px;
 }
 
 .title p {
@@ -48,7 +48,7 @@ body {
 }
 
 .mv-text {
-    margin: 0 40px 0 160px;
+    margin: 0 40px 0 11.7%;
 }
 
 .mv-text1 {
@@ -68,27 +68,38 @@ body {
 }
 
 .mv img {
-    max-width: 753px;
+    height: 862px;
+    object-fit: cover;
+    width: calc(100% - 11.7% - 40px - 395px);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 
 /* サービス */
 
 #service {
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.service__inner{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 67px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-right: 170px;
-    margin-bottom: 80px;
 }
 
 #service h2 {
-    margin-left: 160px;
+    font-size: 40px;
+    margin-left: -60px;
 }
 
 #service .title p {
-    transform: rotate(90deg);
-    margin-top: 110px;
-    margin-left: -120px;
+    position: absolute;
+    top: 0;
+    left: 5.6%;
+    writing-mode: vertical-lr;
 }
 
 .service h3 {
@@ -127,8 +138,8 @@ body {
 /* 制作実績 */
 
 #works {
-    max-width: 1920px;
     margin-bottom: 155px;
+    position: relative;
 }
 
 #works .title {
@@ -136,11 +147,14 @@ body {
 }
 
 #works h2{
-    margin-right: 450px;
+    right: 33%;
+    top: 40px;
+    position: absolute;
+    font-size: 40px;
 }
 
 #works .title p {
-    margin-right: 170px;
+    margin-right: 12.5%;
     margin-bottom: 95px;
 }
 
@@ -150,6 +164,7 @@ body {
     justify-content: unset;
     gap: 35px;
     margin-bottom: 90px;
+    overflow-x: hidden;
 }
 
 #works li {
@@ -161,6 +176,25 @@ body {
     border: solid 8px #f1c16d;
 }
 
+.button a::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    right: 22px;
+}
+
+.button a::after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 5px 0 5px 9px;
+    border-color: transparent transparent transparent #ffffff;
+    right: 29px;
+}
+
 .button a {
     background: #6bd6c7;
     border-radius: 9999px;
@@ -170,7 +204,7 @@ body {
     align-items: center;
     margin: 0 auto;
     max-width: 200px;
-    padding: 10px 25px;
+    padding: 0px 25px 0px 0px;
     color: #fff;
     font-size: 24px;
     line-height: 1.8;
@@ -182,22 +216,32 @@ body {
 #about {
     background-color: #6bd6c7;
     margin-bottom: 160px;
+    position: relative;
+}
+
+.about__inner {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 #about .title {
     text-align: left;
 }
 
-#about .title h2 {
+#about h2 {
     color: #fff;
     padding-top: 63px;
-    margin-left: 160px;
+    padding-bottom: 120px;
+    margin-left: -60px;
+    font-size: 40px;
 }
 
 #about .title p {
     color: #bdf4ea;
-    margin-left: 110px;
-    /* transform: rotate(90deg); */
+    position: absolute;
+    top: -150px;
+    left: 5.6%;
+    writing-mode: vertical-lr;
 }
 
 #about .about {
@@ -205,7 +249,7 @@ body {
     justify-content: end;
     text-align: center;
     gap: 55px;
-    margin-right: 170px;
+    margin-left: 120px;
     padding-bottom: 110px;
 }
 
@@ -250,27 +294,31 @@ body {
 
 /* お問い合わせ */
 
+#contact {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#contact h2 {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
 #contact .title {
     margin-bottom: 64px;
 }
 
 #contact .contact-text {
-    margin-left: 500px;
+    margin-left: 340px;
     margin-bottom: 100px;
     line-height: 1.83;
 }
 
-#contact .title h2 {
-    margin-left: 160px;
-}
-
-#contact .title p {
-    margin-left: 80px;
-}
 
   /* レイアウト */
 form {
-    width: 75%;
     margin: 0 auto 160px auto;
 }
 
@@ -326,16 +374,43 @@ select {
     color: #333;
   }
 
+.form-row button::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    right: 24px;
+    top: 9px;
+}
+
+.form-row button::after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 5px 0 5px 9px;
+    border-color: transparent transparent transparent #ffffff;
+    right: 32px;
+    top: 17px;
+}
+
 button {
+    position: relative;
     cursor: pointer;
     font-size: 24px;
+    font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック";
     margin-top: 30px;
-    padding: 15px 45px;
+    padding: 2px 50px 2px 25px;
     border: none;
     border-radius: 9999px;
     color: #fff;
     font-weight: bold;
     background-color: #6bd6c7;
+  }
+
+  .form-row button {
+    margin-left: 50px;
   }
 
   /* フッター */
