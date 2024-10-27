@@ -75,6 +75,11 @@ body {
     border-bottom-left-radius: 50px;
 }
 
+.hamburger,
+.header-nav-sp {
+    display: none;
+}
+
 /* サービス */
 
 #service {
@@ -446,4 +451,173 @@ button {
     text-align: center;
     color: #fff;
     padding-bottom: 24px;
+}
+
+
+/* レスポンシブ（タブレット） */
+
+@media screen and (max-width:1100px) {
+    .header__inner {
+        margin: 26px 30px 32px 30px;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        z-index: 9999;
+        margin: 28px 20px 0 0;
+    }
+
+    .hamburger span {
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: #f1c16d;
+        top: 13px;
+        transition: .3s;
+    }
+
+    .hamburger span::before {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 3px;
+        background-color: #f1c16d;
+        top: -13px;
+        transition: .3s;
+    }
+
+    .hamburger span::after {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 3px;
+        background-color: #f1c16d;
+        bottom: -13px;
+        transition: .3s;
+    }
+
+    .mv {
+        position: relative;
+    }
+
+    .mv-text {
+        position: absolute;
+    }
+
+    .mv img {
+        width: 70%;
+        margin: 0 0 0 auto;
+    }
+}
+/* レスポンシブ（スマホ） */
+
+@media screen and (max-width:428px) {
+    /* 共通 */
+    .title h2 {
+        font-size: 14px;
+    }
+
+    .title p {
+        font-size: 40px;
+    }
+
+    /* ヘッダー */
+
+    .logo {
+        width: 220px;
+    }
+
+    .mv {
+        padding-bottom: 140px;
+    }
+    
+    .mv img {
+        height: 345px;
+    }
+
+    .mv-text {
+        top: 220px;
+    }
+
+    .mv-text1 {
+        font-size: 65px;
+        margin-bottom: 24px;
+    }
+
+    .mv-text2 {
+        font-size: 14px;
+    }
+
+    /* サービス */
+
+    #service h2 {
+        font-size: 14px;
+    }
+
+    .service__inner{
+        max-width: 315px;
+        display: block;
+    }
+
+    .service h3 {
+        font-size: 20px;
+    }
+    
+    .service-inner {
+        display: block;
+    }
+
+    .service-text p {
+        font-size: 14px;
+    }
+
+    /* 制作実績 */
+
+    #works h2 {
+        font-size: 14px;
+    }
+
+    #works ul {
+        flex-direction: column;
+    }
+
+    #works li {
+        width: 80%;
+    }
+
+    /* 私について */
+
+    #about .title p  {
+        top: -40px;
+    }
+
+    #about h2 {
+        font-size: 14px;
+    }
+
+    #about img {
+        height: 272px;
+    }
+
+    .about-text-1 {
+        font-size: 16px;
+    }
+
+    .about-text-2 {
+        font-size: 32px;
+    }
+
+    .about-text-3 {
+        font-size: 14px;
+    }
 }
